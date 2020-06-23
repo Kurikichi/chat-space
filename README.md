@@ -24,12 +24,12 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
+|group_name|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
-|tweet_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :messages
+- has_many :messages
 - has_many :user,  through:  :groups_users
+- has_many :groups_users
 
 ## groups_usersテーブル
 |Column|Type|Options|
