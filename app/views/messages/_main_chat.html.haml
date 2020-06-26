@@ -1,0 +1,31 @@
+.chat-main
+  .chat-main__group-info
+    .group
+      %p.group__groupname techcamp
+      %ul.group__memberlist
+        Member：
+        %li.group__membername masa
+    = link_to "#", class: "group__editbutton" do
+      Edit
+  .chat-main__message-list
+    .messagebox
+      .messageinfo
+        .messageinfo__username masa
+        .messageinfo__date 2020年01月01日 01時01分
+      .message
+        %p.message__content test
+    .messagebox
+      .messageinfo
+        .messageinfo__username masa
+        .messageinfo__date 2020年01月01日 01時02分
+      .message
+        %p.message__content hello
+  .chat-main__message-form
+    %form.new_message
+      .input-box
+        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          .input-box__image__icon
+            = icon('far', 'image',)
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type: "submit", value: "Send", class: "submit-btn"}
