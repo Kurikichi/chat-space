@@ -5,7 +5,7 @@
         = current_user.name
       %ul.top-items__icons
         %li.top-items__icon
-          = link_to new_group_path() do
+          = link_to new_group_path do
             = icon('fas', 'edit')
         %li.top-items__icon  
           = link_to edit_user_path(current_user) do
@@ -13,8 +13,8 @@
   .side-bar__group-list
     - current_user.groups.each do |group|
       .group
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .group__name
             = group.name
           .group__message
-            メッセージはまだありません
+            = group.show_last_message
