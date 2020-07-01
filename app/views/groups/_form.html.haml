@@ -22,6 +22,9 @@
       = f.label :name, value: "チャットメンバー", class: "SettingGroupForm__label"
     .SettingGroupForm__rightField
       .ChatMembers
+        .ChatMember
+          %p.ChatMember__name= current_user.name
+          %input{name: "group[user_ids][]", type: "hidden", value: current_user.id}
   .SettingGroupForm__field
     .SettingGroupForm__leftField
     .SettingGroupForm__rightField
