@@ -39,6 +39,7 @@
       background-color: #2f3e51;
       height: calc(100vh - 100px);
       padding: 0 20px;
+      overflow: scroll;
       .group {
       box-sizing: border-box;
       padding: 20px 0 40px;
@@ -94,6 +95,7 @@
       box-sizing: border-box;
       padding: 35px 40px 0;
       height: calc(100vh - 100px - 90px);
+      overflow: scroll;
       .messagebox {
         margin-bottom: 46px;
         .messageinfo {
